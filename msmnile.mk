@@ -155,6 +155,9 @@ endif
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+PRODUCT_SELINUX_TREBLE_LABELING_TRACKING_LIST_FILE := \
+    device/xiaomi/sm8150-common/sepolicy/tracking_list.yaml
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
