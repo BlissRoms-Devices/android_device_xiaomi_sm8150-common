@@ -1,0 +1,33 @@
+package {
+    default_applicable_licenses: ["device_xiaomi_sm8150-common_media_libheif_license"],
+}
+
+license {
+    name: "device_xiaomi_sm8150-common_media_libheif_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+}
+
+cc_library_shared {
+    name: "libheif",
+
+    srcs: [
+        "HeifDecoderImpl.cpp",
+    ],
+
+    shared_libs: [
+        "libbinder",
+        "liblog",
+        "libutils",
+        "libmedia",
+    ],
+
+    cflags: [
+        "-Werror",
+        "-Wall",
+    ],
+
+    export_include_dirs: ["include"],
+}

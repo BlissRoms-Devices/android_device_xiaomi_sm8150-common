@@ -4,6 +4,10 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+subdirs = [
+    "libheif",
+]
+
 prebuilt_etc {
     name: "media_codecs.xml",
     src: "media_codecs.xml",
